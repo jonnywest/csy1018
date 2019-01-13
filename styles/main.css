@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation layout and styling from class demo */
+nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    padding: 10px
+}
+
+ul {
+    overflow: hidden;
+    list-style-type: none;
+
+}
+
+li {
+    height: 25px;
+    float: left;
+    margin-right: 0px;
+    border-right: 1px solid #aaa;
+    padding: 0 20px;
+}
+
+li:last-child {
+    border-right: none;
+
+}
+
+li a {
+    text-decoration: none;
+    color: #ccc;
+    font: 2em Helventica, Verdana, sans-serif;
+    text-transform: uppercase;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+
+li a:hover {
+    color: #666
+
+}
+
+li.active a {
+    font-weight: bold;
+    color: #333
+}
+
+
+
+/*Newspaper layout and styling adapted from "Newspaper Layout using CSS Columns" by  lizcoultersmith 
+https://codepen.io/lizcoultersmith/pen/VERGPO*/
+
+::selection {
+    background: #fff9f9;
+    color: rgb(207, 207, 207);
+  }
+  
+  ::-moz-selection {
+    background: #d6d6d6;
+    color: rgb(243, 240, 240);
+  }
+  
+  body {
+    font-family: 'PT Serif', serif;
+    background-color: #ebebeb;
+    color: #505050;
+    padding: 20px;
+  }
+  
+  blockquote {
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.3em;
+    font-size: 1.6em;
+    column-span: none;
+    -webkit-column-span: 2;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 8px;
+  }
+  
+  h1 {
+    font-family: Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 4.2em;
+    line-height: 1.2em;
+    text-align: center;
+    font-weight: 600;
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+    margin-bottom: 32px;
+  }
+  
+  h2,
+  h3 {
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+  
+  h2 {
+    font-size: 2.8em;
+    line-height: 1em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+  
+  h3 {
+    font-size: 2.2em;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0.8em;
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+  
+  .time {
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    border-top: 5px solid rgb(70, 70, 70);
+    border-bottom: 5px solid rgb(43, 42, 42);
+    font-size: 1.6em;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+
+
+  
+ 
+/*Breakpoint for nav system*/
+
+@media screen and (max-width: 600px) {
+
+  li { 
+    float:none;
+    border-right:none; 
+  }
+}
+
+/*Breakpoint for layout- adapted from "Newspaper Layout using CSS Columns" by  lizcoultersmith 
+https://codepen.io/lizcoultersmith/pen/VERGPO */ 
+
+  @media only all and (min-width: 600px) {
+    article {
+      -moz-columns: 2;   
+      -webkit-columns: 2;
+      columns: 2;
+      -webkit-column-gap: 30px;
+      -moz-column-gap: 30px;
+      column-gap: 30px;
+      line-height: 1.5em;
+      font-size: 1em;
+      -webkit-column-rule: 2px outset #444;
+      -moz-column-rule: 2px outset #444;
+      column-rule: 2px outset #444;
+    }
+
+    
+    h1 {
+      font-size: 8em;
+      column-span: all;
+      -webkit-column-span: all;
+    }
+    .time {
+      column-span: all;
+      -webkit-column-span: all;
+    }
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+    }
+
+  /*footer styling*/
+
+  footer {
+    font-family: 'PT Serif', serif;
+    font-size: 0.8em;
+    color: #404040;
+    padding: 15px;
+
+  }
+
+ }
+
+
+
+
+
+
+
+ /*image placement*/
+
+ img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+
+
+
